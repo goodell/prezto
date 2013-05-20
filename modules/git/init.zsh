@@ -14,5 +14,6 @@ fi
 pmodload 'helper'
 
 # Source module files.
-source "${0:h}/alias.zsh"
+# [goodell] I really hate these aliases
+#source "${0:h}/alias.zsh"
 
