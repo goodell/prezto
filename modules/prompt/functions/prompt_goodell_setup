@@ -5,6 +5,11 @@
 pmodload 'helper'
 
 function prompt_sorin_pwd {
+  # the _prompt_sorin_pwd assignments below only work correctly if
+  # EXTENDED_GLOB is set, but I don't like to have it set in general
+  setopt localoptions
+  setopt extendedglob
+
   local pwd="${PWD/#$HOME/~}"
 
   if [[ "$pwd" == (#m)[/~] ]]; then
